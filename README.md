@@ -48,3 +48,8 @@ In performance testing, percentiles are used to analyze and report how a system 
 Mimic scenario like real client
  - Constant timer: delay between each request
  - Uniform random timer: (followed formula: random(0.0 ~ 0.9) x random delay max + constant delay offset) mimic client action, ex: request1 is quick, but then client need more time to do request2
+
+## Loop Controller and If Controller
+
+ - Loop controller: Loop x times for each user
+ - If controller: Run if condition meet (Using JSR223 for logic check)
