@@ -53,3 +53,11 @@ Mimic scenario like real client
 
  - Loop controller: Loop x times for each user
  - If controller: Run if condition meet (Using JSR223 for logic check)
+
+## Simple controller and Module controller, Test fragment, include controller
+
+ - Simple controller: Group single request into a group ---> Highly recommend
+ - Module controller: Option to run simple controller (even simple controller is disable). Should be set up in "module to run", only apply for logic controller
+ - Test fragment: auto disable
+ - Include controller: Run request indicated by user (before: user save a request with: save as test fragment)
+ - Random Controller: random "n" request in range || Random order controller: random all request in range
