@@ -54,10 +54,22 @@ Mimic scenario like real client
  - Loop controller: Loop x times for each user
  - If controller: Run if condition meet (Using JSR223 for logic check)
 
-## Simple controller and Module controller, Test fragment, include controller
+## Controller
 
  - Simple controller: Group single request into a group ---> Highly recommend
  - Module controller: Option to run simple controller (even simple controller is disable). Should be set up in "module to run", only apply for logic controller
  - Test fragment: auto disable
  - Include controller: Run request indicated by user (before: user save a request with: save as test fragment)
  - Random Controller: random "n" request in range || Random order controller: random all request in range
+ - Interleave controller: Do 1 request each iteration (loop)
+ - Once and only: Only do 1 request 
+ - runtime controller: Loop request depend on setting time
+ - Throughput controller: (Throughput: amount of work completed or request handled in give time) used to control the percentage / number of times a specific part of test plan (Ex: not all user doing same behaviour)
+ 
+ # Throughput controller
+  - Ex: + Simulate mix of user, they do different action
+        + Limit execution of specific sampler
+		+ Simulate Load profile in different scenario 
+		
+  - Ex scenario: In e-commerce web, we want to do performance test for payment system: 10% user buy item1, 60% item 2, 30% item 3. When user purchase a item, there will be a specify request to system.
+  - Summary = 100%
