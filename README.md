@@ -66,10 +66,20 @@ Mimic scenario like real client
  - runtime controller: Loop request depend on setting time
  - Throughput controller: (Throughput: amount of work completed or request handled in give time) used to control the percentage / number of times a specific part of test plan (Ex: not all user doing same behaviour)
  
- # Throughput controller
+### Throughput controller
   - Ex: + Simulate mix of user, they do different action
         + Limit execution of specific sampler
 		+ Simulate Load profile in different scenario 
 		
   - Ex scenario: In e-commerce web, we want to do performance test for payment system: 10% user buy item1, 60% item 2, 30% item 3. When user purchase a item, there will be a specify request to system.
   - Summary = 100%
+  
+## Variables and Functions
+ - Ex:  ${__Random(1,10,ranNum)}
+ - Functions: Can use function helper button -> Input value -> Generate
+ - Popular: log, threadNum
+ 
+ ## Post - Pre processor
+ 
+ - PRE:
+ - user parameter: set up data for each user, need to increase user in thread group setting
